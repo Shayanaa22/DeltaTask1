@@ -40,7 +40,7 @@ function moveToArray(i){
     
     if(index==17){
         const output=document.getElementsByClassName("Output");
-        output[0].innerHTML="You Won!";
+        output[0].innerHTML="You Won! Score:16/16";
         gameInProcess=false;
         cellElements.forEach(cell => {
             cell.removeEventListener("click", moveToArray);
@@ -57,11 +57,24 @@ function checkifpatternclickediscrct(){
     if(check(newarr1,newarr2)){
             gameInProcess=false;
             alert("Game Over!");
+            const output=document.getElementsByClassName("Output");
+            output[0].innerHTML="Score:"+(index-1)+"/16";
         }
     else{ 
         index++;
         temp=0;
-        pattern();}
+        if(index!=17){
+        const nexr = document.getElementById("nextround");
+        nexr.classList.add("round");
+        nexr.innerHTML="Moving on to round"+index+" ...";
+        setTimeout(function(){
+            nexr.classList.remove("round");
+        },2000);
+        console.log(nexr);}
+
+        setTimeout(function(){
+            pattern();},3000);
+        }
 }
 
 function check(a,b){
