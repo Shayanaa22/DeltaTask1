@@ -7,10 +7,10 @@ body{
 }
 
 .heading{
-    color: rgb(4, 248, 236);
+    color: white;
     font: bold;
     text-align: center;
-    font-family: cursive;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 55px;
 }
 
@@ -24,7 +24,7 @@ body{
 }
 
 .cell:hover{
-    background-color:white;
+    background-color:rgb(170, 235, 255);
 }
 
 .pattern{
@@ -36,13 +36,14 @@ body{
     width: 100px;
     height: 100px;
     border: 2px solid rgba(0, 0, 0, 0.959);
-    background-color: rgb(247, 117, 252);
+    background-color: rgb(16, 239, 255);
     border-radius: 8px;
     cursor: pointer;
     position: relative;
 }
 
 .button{
+    align-items: center;
     position: fixed;
     left: 45%;
     background-color: black;
@@ -60,15 +61,32 @@ body{
 
 .Output{
     font:italic;
+    color: antiquewhite;
     text-align: center;
     font-size: 30px;
 }
 
+.next.round{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(3, 3, 3, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:bisque;
+    font-size: 45px;
+    font-family: cursive;
+
+}
+
 
 @keyframes blinking{
-    from{ background-color:  rgb(247, 117, 252);}
+    from{ background-color:rgb(27, 148, 179) ;}
     to{
-        background-color: rgb(168, 249, 255);
+        background-color: rgb(16, 239, 255);
     }
 }
 
@@ -94,6 +112,10 @@ body{
 
     .Output{
         font-size: 15px;
+    }
+
+    .next.round{
+        font-size: 25px;
     }
 
 }
